@@ -3,29 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blue Danube Promenade — stanovi do 50 m² u lamelama 5 i 6 · Zemun, Beograd</title>
-<meta name="description" content="Blue Danube Promenade — stambeno-poslovni kompleks od osam lamela oko zajedničkog unutrašnjeg dvorišta, na obodu naselja Altina u Zemunu, Beograd. U fokusu prodaje: lamele 5 i 6, stanovi do 50 m² sa originalnim osnovama.">
+<title>Blue Danube Promenade — stanovi do 40 m² u lamelama 5 i 6 · Zemun, Beograd</title>
+<meta name="description" content="Blue Danube Promenade — stambeno-poslovni kompleks od osam lamela oko zajedničkog unutrašnjeg dvorišta, na obodu naselja Altina u Zemunu, Beograd. U fokusu prodaje: lamele 5 i 6, stanovi do 40 m² sa originalnim osnovama.">
 <meta name="theme-color" content="#0e131b">
 <link rel="alternate" hreflang="sr-Latn" href="index.html">
 <link rel="alternate" hreflang="ru" href="ru.html">
 <link rel="preload" href="fonts/NotoSerifDisplay-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/Onest-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/Onest-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" as="image" href="img/dusk-2000.avif" type="image/avif" imagesrcset="img/dusk-1200.avif 1200w, img/dusk-2000.avif 2000w, img/dusk-3200.avif 3200w" imagesizes="100vw">
+<link rel="preload" as="image" href="img/intro/facade-day.webp" type="image/webp" media="(min-aspect-ratio: 9/10)" fetchpriority="high">
+<link rel="preload" as="image" href="img/intro/facade-day-m.webp" type="image/webp" media="(max-aspect-ratio: 9/10)" fetchpriority="high">
 <link rel="stylesheet" href="fonts/fonts.css">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=kv8">
+<script>document.documentElement.classList.add('js')</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230e131b'/%3E%3Cpath d='M7 9h18l-3 14H10z' fill='none' stroke='%23c9b396' stroke-width='2.4'/%3E%3C/svg%3E">
 </head>
 <body>
 <a class="skip" href="#stanovi">Preskoči na izbor stanova</a>
 
 <header class="site-header" id="top">
-  <a class="wordmark" href="#intro" aria-label="Blue Danube Promenade — na početak"><span class="wm-1">Blue Danube</span><span class="wm-2">Promenade</span></a>
+  <a class="wordmark" href="#intro" aria-label="Blue Danube Promenade — na početak"><img class="wm-logo" src="img/brand/logo-bd-ink.webp" width="103" height="58" alt="Blue Danube Promenade"></a>
   <nav class="main-nav" aria-label="Glavna navigacija">
-    <a href="#mesto">Lokacija</a>
-    <a href="#zdanie">Zgrada</a>
+    <a href="#kvart">Kvart</a>
+    <a href="#arhitektura">Arhitektura</a>
+    <a href="#partner">Prizemlje</a>
     <a href="#dvor">Dvorište</a>
-    <a href="#cifry">Brojke</a>
     <a href="#stanovi">Stanovi</a>
   </nav>
   <div class="header-right">
@@ -39,164 +41,160 @@
 <nav class="dots" aria-label="Poglavlja stranice">
   <ol>
     <li><a href="#intro" data-label="Početak"><span class="sr">Početak</span></a></li>
-    <li><a href="#mesto" data-label="Lokacija"><span class="sr">Lokacija</span></a></li>
-    <li><a href="#zdanie" data-label="Zgrada-blok"><span class="sr">Zgrada-blok</span></a></li>
+    <li><a href="#kvart" data-label="Kvart"><span class="sr">Kvart</span></a></li>
     <li><a href="#arhitektura" data-label="Arhitektura"><span class="sr">Arhitektura</span></a></li>
     <li><a href="#partner" data-label="Prizemlje"><span class="sr">Prizemlje</span></a></li>
     <li><a href="#dvor" data-label="Dvorište"><span class="sr">Dvorište</span></a></li>
-    <li><a href="#cifry" data-label="Brojke"><span class="sr">Brojke</span></a></li>
     <li><a href="#stanovi" data-label="Izbor stanova"><span class="sr">Izbor stanova</span></a></li>
     <li><a href="#zayavka" data-label="Zahtev"><span class="sr">Zahtev</span></a></li>
   </ol>
 </nav>
 
 <main>
-<section class="hero" id="intro" aria-labelledby="hero-title" data-chapter>
-  <div class="hero-stage">
-    <div class="hero-par">
-      <picture class="hero-pic">
-        <source type="image/avif" srcset="img/dusk-1200.avif 1200w, img/dusk-2000.avif 2000w, img/dusk-3200.avif 3200w" sizes="100vw">
-        <source type="image/webp" srcset="img/dusk-1200.webp 1200w, img/dusk-2000.webp 2000w, img/dusk-3200.webp 3200w" sizes="100vw">
-        <img class="hero-img" src="img/dusk-2000.webp" width="2000" height="1120" alt="Vizualizacija kompleksa Blue Danube Promenade u sumrak: ugaoni volumen sa staklenim erkerima, ozelenjen krov i kafe u prizemlju" fetchpriority="high">
+<!-- 0 · INTRO — pinned scroll story: facade → windows light up → one day inside → whole complex -->
+<section class="intro" id="intro" aria-labelledby="hero-title" data-chapter data-intro>
+  <div class="intro-pin">
+    <div class="intro-media" aria-hidden="true">
+      <picture class="intro-poster">
+        <source media="(max-aspect-ratio: 9/10)" srcset="img/intro/facade-day-m.webp" type="image/webp">
+        <img src="img/intro/facade-day.webp" width="1600" height="900" alt="" fetchpriority="high" decoding="async">
       </picture>
+      <picture class="intro-wx" data-wx="rain">
+        <source media="(max-aspect-ratio: 9/10)" data-srcset="img/intro/facade-rain-m.webp" type="image/webp">
+        <img data-src="img/intro/facade-rain.webp" width="1600" height="900" alt="" decoding="async">
+      </picture>
+      <picture class="intro-wx" data-wx="night">
+        <source media="(max-aspect-ratio: 9/10)" data-srcset="img/intro/facade-night-m.webp" type="image/webp">
+        <img data-src="img/intro/facade-night.webp" width="1600" height="900" alt="" decoding="async">
+      </picture>
+      <canvas class="intro-canvas"></canvas>
+      <div class="intro-scene" data-scene="0"><picture><source media="(max-aspect-ratio: 9/10)" data-srcset="img/intro/morning-m.webp"><img data-src="img/intro/morning-1600.webp" width="1600" height="900" alt="" decoding="async"></picture></div>
+      <div class="intro-scene" data-scene="1"><picture><source media="(max-aspect-ratio: 9/10)" data-srcset="img/intro/day-m.webp"><img data-src="img/intro/day-1600.webp" width="1600" height="900" alt="" decoding="async"></picture></div>
+      <div class="intro-scene" data-scene="2"><picture><source media="(max-aspect-ratio: 9/10)" data-srcset="img/intro/evening-m.webp"><img data-src="img/intro/evening-1600.webp" width="1600" height="900" alt="" decoding="async"></picture></div>
+      <div class="intro-scene intro-final" data-scene="3"><picture><source media="(max-aspect-ratio: 9/10)" data-srcset="img/intro/pull-m/048.webp"><img data-src="img/intro/pull-d/048.webp" width="1152" height="648" alt="" decoding="async"></picture></div>
+      <div class="intro-veil"></div>
     </div>
-    <div class="hero-glow" aria-hidden="true"></div>
-    <div class="hero-shade" aria-hidden="true"></div>
-  </div>
 
-  <div class="hero-copy">
-    <p class="eyebrow">Zemun · Beograd</p>
-    <h1 id="hero-title" class="hero-title"><span class="ht-1">Blue Danube</span> <span class="ht-2">Promenade</span></h1>
-    <p class="hero-sub">Jedna zgrada. Osam lamela. Zajedničko unutrašnje dvorište.</p>
-    <div class="hero-offer">
-      <p class="offer-pill"><span class="offer-kicker">U fokusu prodaje</span><span class="offer-main">Lamele 5 i 6 · Stanovi do 50&nbsp;m²</span></p>
-      <a class="btn btn-cta btn-hero" href="#stanovi">Pronađite stan <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg></a>
+    <div class="intro-step is-on" data-step="0">
+      <p class="eyebrow">Blue Danube Promenade · Zemun, Beograd</p>
+      <h1 id="hero-title" class="intro-title">Vaš grad u gradu.</h1>
+      <p class="intro-sub">Osam lamela oko zajedničkog dvorišta. Domovi, poslovni prostori i promenada — na jednom mestu.</p>
     </div>
-  </div>
-
-  <div class="hero-facts" role="group" aria-label="Ključni podaci o celom kompleksu">
-    <div class="facts-col">
-      <p class="facts-cap">Ceo kompleks</p>
-      <dl>
-        <div><dt>stan</dt><dd>1&nbsp;291</dd></div>
-        <div><dt>poslovna prostora</dt><dd>93</dd></div>
-        <div><dt>spratnost</dt><dd>P+9+Ps</dd></div>
-      </dl>
+    <div class="intro-step intro-card" data-step="1">
+      <p class="intro-kicker">Kad padne veče</p>
+      <p class="intro-line">Prozori se pale jedan po jedan. Iza svakog — nečiji dom i nečija priča.</p>
     </div>
-    <p class="plaque"><span class="pin" aria-hidden="true"></span>Zemun, obod naselja Altina</p>
-  </div>
-
-  <span class="vside vside-l" aria-hidden="true">Vizualizacija · veče</span>
-  <span class="vside vside-r" aria-hidden="true">Skrolujte naniže</span>
-
-  <a class="scroll-cue" href="#mesto" aria-label="Idi na poglavlje „Lokacija“">
-    <svg viewBox="0 0 64 64" aria-hidden="true"><circle class="ring-bg" cx="32" cy="32" r="30"/><circle class="ring" cx="32" cy="32" r="30"/><path d="M32 22v20M25 35l7 7 7-7"/></svg>
-  </a>
-</section>
-
-<!-- 1 · LOKACIJA -->
-<section class="chapter ch-place" id="mesto" aria-labelledby="place-title" data-chapter>
-  <div class="wrap grid-2">
-    <div class="col-text">
-      <p class="eyebrow"><span class="num">01</span> Lokacija</p>
-      <h2 id="place-title" class="h2 reveal-words">Na obodu Altine, u Zemunu</h2>
-      <p class="lede">Kompleks se nalazi na obodu naselja Altina, u opštini Zemun. Okružuju ga magistrala T6, auto-put Beograd&nbsp;– Novi Sad i ulice S126 i S133&nbsp;– Ratarski put.</p>
-      <p class="body">Sa druge strane je gusto tkivo pojedinačnih stambenih objekata. U neposrednoj blizini nalazi se Regionalni poštanski centar Pošte Srbije.</p>
-      <ul class="legend">
-        <li><span class="sw sw-road" aria-hidden="true"></span>T6&nbsp;– magistrala</li>
-        <li><span class="sw sw-road" aria-hidden="true"></span>Auto-put Beograd&nbsp;– Novi Sad</li>
-        <li><span class="sw sw-street" aria-hidden="true"></span>S126&nbsp;– planirana ulica</li>
-        <li><span class="sw sw-street" aria-hidden="true"></span>S133&nbsp;– Ratarski put</li>
-      </ul>
+    <div class="intro-step intro-card" data-step="2">
+      <p class="intro-kicker">Jutro</p>
+      <p class="intro-line">Jutro počinje kod kuće — uz doručak i sunce kroz veliki prozor.</p>
     </div>
-    <figure class="col-media place-map">
-      <svg class="ctx-svg" viewBox="0 0 640 520" role="img" aria-labelledby="ctx-t ctx-d">
-        <title id="ctx-t">Uslovna šema okruženja</title>
-        <desc id="ctx-d">Parcela u obliku trapeza u sredini. S jedne strane je ulica S126, s druge magistrala T6 i iza nje auto-put Beograd&nbsp;– Novi Sad, s treće Ratarski put (S133); u blizini je niska stambena gradnja.</desc>
-        <defs>
-          <pattern id="houses" width="22" height="22" patternUnits="userSpaceOnUse"><rect x="4" y="4" width="10" height="10" rx="1.5" class="house"/></pattern>
-        </defs>
-        <rect x="0" y="330" width="250" height="190" fill="url(#houses)" class="draw-fade"/>
-        <rect x="0" y="0" width="150" height="330" fill="url(#houses)" class="draw-fade"/>
-        <path class="road road-hw draw" d="M612 0 C 600 160, 590 300, 560 520"/>
-        <path class="road road-t6 draw" d="M520 0 C 512 150, 500 320, 470 520"/>
-        <path class="road road-st draw" d="M120 92 L 640 92"/>
-        <path class="road road-st draw" d="M190 520 L 172 92"/>
-        <path class="road road-int draw" d="M175 388 L 488 388"/>
-        <polygon class="site draw-fade" points="200,120 470,120 452,360 214,360"/>
-        <polygon class="site-court draw-fade" points="236,150 434,150 422,328 246,328"/>
-        <text class="lbl" x="300" y="80">S126</text>
-        <text class="lbl" x="160" y="250" transform="rotate(-87 160 250)">S133 · Ratarski put</text>
-        <text class="lbl" x="528" y="230" transform="rotate(86 528 230)">T6 · magistrala</text>
-        <text class="lbl lbl-hw" x="590" y="28" transform="rotate(94 590 28)">Beograd&nbsp;– Novi Sad</text>
-        <text class="lbl lbl-site" x="335" y="245" text-anchor="middle">parcela</text>
-        <text class="lbl lbl-soft" x="20" y="490">niska gradnja</text>
-      </svg>
-      <figcaption class="caption">Šema je uslovna, nije u razmeri i nije karta. Udaljenosti i vreme putovanja biće objavljeni naknadno.</figcaption>
-    </figure>
+    <div class="intro-step intro-card" data-step="3">
+      <p class="intro-kicker">Dan</p>
+      <p class="intro-line">Kafa, kupovina i obaveze — u prizemlju, par koraka od vrata.</p>
+      <p class="intro-note">Planirani poslovni prostori u prizemlju kompleksa.</p>
+    </div>
+    <div class="intro-step intro-card" data-step="4">
+      <p class="intro-kicker">Veče</p>
+      <p class="intro-line">Veče u dvorištu i na promenadi, sa prijateljima.</p>
+    </div>
+    <div class="intro-step intro-card intro-end" data-step="5">
+      <p class="intro-kicker">Blue Danube Promenade</p>
+      <h2 class="intro-h2">Sve ovo — na jednoj adresi.</h2>
+      <p class="intro-line">Osam lamela, zajedničko dvorište i poslovni prostori u prizemlju.</p>
+      <p class="offer-pill"><span class="offer-kicker">U fokusu prodaje</span><span class="offer-main">Lamele 5 i 6 · Stanovi do 40&nbsp;m²</span></p>
+      <a class="btn btn-cta btn-hero" href="#stanovi">Pogledajte stanove <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 3v10M3.5 8.5 8 13l4.5-4.5"/></svg></a>
+    </div>
+
+    <ol class="intro-day" aria-label="Dan u kompleksu">
+      <li data-day="2">Jutro</li><li data-day="3">Dan</li><li data-day="4">Veče</li>
+    </ol>
+    <p class="intro-cap" data-v="Vizualizacija na osnovu 3D modela" data-i="Ilustracija">Vizualizacija na osnovu 3D modela</p>
+    <div class="intro-hint" aria-hidden="true"><span>Skrolujte</span><i></i></div>
+    <a class="intro-skip" href="#kvart">Preskoči uvod</a>
+    <div class="intro-bar" aria-hidden="true"><i></i></div>
   </div>
 </section>
 
-<!-- 2 · ZGRADA-BLOK -->
-<section class="chapter ch-block light" id="zdanie" aria-labelledby="block-title" data-chapter>
-  <div class="block-pin">
-    <div class="wrap grid-2 block-grid">
-      <div class="col-text">
-        <p class="eyebrow"><span class="num">02</span> Zgrada-blok</p>
-        <h2 id="block-title" class="h2">Jedna zgrada oko jednog dvorišta</h2>
-        <p class="lede">Osam lamela spojeno je u zatvoreni gradski blok. Unutrašnje dvorište je polu-privatno i namenjeno pre svega stanarima, a do njega se stiže kroz pešačke pasaže u nivou prizemlja.</p>
-        <dl class="counters">
-          <div><dd data-count="8">8</dd><dt>lamela</dt></div>
-          <div><dd data-count="1">1</dd><dt>unutrašnje dvorište</dt></div>
-          <div><dd data-count="3">3</dd><dt>pasaža ka dvorištu</dt></div>
-        </dl>
+<!-- 1 · KVART — interactive 3D: overview, surroundings, lamellas, courtyard, ground floor -->
+<section class="chapter kv is-night" id="kvart" aria-labelledby="kv-title" data-chapter data-kvart>
+  <div class="kv-stage">
+    <picture class="kv-poster" aria-hidden="true">
+      <source media="(max-aspect-ratio: 9/10)" srcset="img/intro/orb-m/097.webp" type="image/webp">
+      <img src="img/intro/orb-d/097.webp" width="1024" height="576" alt="" loading="lazy" decoding="async">
+    </picture>
+    <div class="kv-shade" aria-hidden="true"></div>
+    <div class="kv-pins"></div>
+    <p class="kv-status" role="status" hidden></p>
+    <div class="kv-tools">
+      <div class="kv-seg" role="group" aria-label="Osvetljenje">
+        <button type="button" data-kv-mode="day" aria-pressed="false">Dan</button>
+        <button type="button" data-kv-mode="night" aria-pressed="true">Veče</button>
       </div>
-      <figure class="col-media scheme">
-        <svg class="scheme-svg" viewBox="0 0 640 340" role="group" aria-label="Uslovna šema: osam lamela oko unutrašnjeg dvorišta. Izaberite lamelu da biste videli njene podatke.">
-          <defs>
-            <clipPath id="trap"><polygon points="20,40 620,40 563,300 77,300"/></clipPath>
-          </defs>
-          <polygon class="court" points="20,40 620,40 563,300 77,300"/>
-          <text class="court-lbl" x="320" y="176" text-anchor="middle">unutrašnje dvorište</text>
-          <g clip-path="url(#trap)">
-            <polygon class="sec" data-sec="1" tabindex="0" role="button" aria-label="Lamela 1" points="20,40 210,40 210,96 20,96"/>
-            <polygon class="sec" data-sec="2" tabindex="0" role="button" aria-label="Lamela 2" points="226,40 400,40 400,96 226,96"/>
-            <polygon class="sec" data-sec="3" tabindex="0" role="button" aria-label="Lamela 3" points="416,40 620,40 620,96 416,96"/>
-            <polygon class="sec" data-sec="4" tabindex="0" role="button" aria-label="Lamela 4" points="607.6,96.7 591.7,168.9 537.0,156.9 552.9,84.7"/>
-            <polygon class="sec is-focus" data-sec="5" tabindex="0" role="button" aria-label="Lamela 5, u fokusu prodaje" points="591.1,171.9 575.5,243.2 520.8,231.2 536.4,159.9"/>
-            <polygon class="sec is-focus" data-sec="6" tabindex="0" role="button" aria-label="Lamela 6, u fokusu prodaje" points="563,300 313,300 313,244 563,244"/>
-            <polygon class="sec" data-sec="7" tabindex="0" role="button" aria-label="Lamela 7" points="310,300 123,300 123,244 310,244"/>
-            <polygon class="sec" data-sec="8" tabindex="0" role="button" aria-label="Lamela 8" points="64.6,243.3 32.5,96.8 87.2,84.8 119.3,231.4"/>
-          </g>
-          <g class="sec-nums" aria-hidden="true">
-            <text x="115" y="73">1</text><text x="313" y="73">2</text><text x="518" y="73">3</text>
-            <text x="572" y="132">4</text><text class="is-focus" x="556" y="207">5</text><text class="is-focus" x="438" y="277">6</text>
-            <text x="216" y="277">7</text><text x="76" y="169">8</text>
-          </g>
-          <g class="passages" aria-hidden="true">
-            <path d="M218 18 v40 M211 50 l7 8 7-8"/>
-            <path d="M408 18 v40 M401 50 l7 8 7-8"/>
-            <path d="M86 322 l14 -40 M93 293 l7 -11 4 12"/>
-          </g>
-          <text class="street" x="320" y="24" text-anchor="middle" aria-hidden="true">S126</text>
-          <text class="street" x="626" y="170" aria-hidden="true" transform="rotate(78 626 170)">T6</text>
-          <text class="street" x="8" y="168" text-anchor="middle" aria-hidden="true" transform="rotate(-78 8 168)">Ratarski put</text>
-        </svg>
-        <ul class="sec-legend">
-          <li><span class="sw-f" aria-hidden="true"></span>Lamele 5 i 6&nbsp;– u fokusu prodaje, stanovi do 50&nbsp;m²</li>
-          <li><span class="sw-m" aria-hidden="true"></span>Ostale lamele kompleksa</li>
-        </ul>
-        <div class="sec-info">
-          <div aria-live="polite">
-            <p class="sec-info-title" id="sec-title">Lamela 1</p>
-            <p class="sec-info-text" id="sec-text">Duž ulice S126 · 18,5 × 57 m · 167 stanova, 10 lokala</p>
-          </div>
-          <a class="btn btn-ink sec-cta" id="sec-cta" href="#stanovi" hidden>Stanovi u lameli 5</a>
-        </div>
-        <figcaption class="caption">Šema je uslovna. Osnova kompleksa je trapez ≈ 199 × 85 m; strelice označavaju pešačke pasaže između lamela 1–2, 2–3 i 7–8.</figcaption>
-      </figure>
+      <div class="kv-seg kv-zoom" role="group" aria-label="Uvećanje modela">
+        <button type="button" data-kv-zoom="in" aria-label="Približi">+</button>
+        <button type="button" data-kv-zoom="out" aria-label="Udalji">−</button>
+      </div>
+      <div class="kv-seg kv-free-seg">
+        <button type="button" data-kv-free aria-pressed="false" aria-label="Slobodan pogled na model"><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5V3h4.5M17 7.5V3h-4.5M3 12.5V17h4.5M17 12.5V17h-4.5"/><circle cx="10" cy="10" r="2.2"/></svg><span>Slobodan pogled</span></button>
+      </div>
+    </div>
+    <button type="button" class="kv-touch" hidden><svg viewBox="0 0 20 20" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7.5V3h4.5M17 7.5V3h-4.5M3 12.5V17h4.5M17 12.5V17h-4.5"/><circle cx="10" cy="10" r="2.2"/></svg> Otvori 3D model</button>
+    <p class="kv-hint" aria-hidden="true">Prevucite za okretanje · klik na lamelu</p>
+    <div class="kv-freebar" hidden>
+      <p class="kv-freehint" data-mouse><b>Levi taster</b> okretanje <i></i> <b>Desni taster / Shift</b> pomeranje <i></i> <b>Točkić</b> približavanje <i></i> <b>Dvoklik</b> fokus na tačku <i></i> <b>Esc</b> izlaz</p>
+      <p class="kv-freehint" data-touch><b>1 prst</b> okretanje <i></i> <b>2 prsta</b> pomeranje i uvećanje <i></i> <b>Dvostruki dodir</b> fokus</p>
+      <div class="kv-freebtns">
+        <button type="button" data-kv-free-reset>Početni pogled</button>
+        <button type="button" data-kv-free-exit><span aria-hidden="true">✕</span> Izađi</button>
+      </div>
     </div>
   </div>
+
+  <div class="kv-panel">
+    <p class="eyebrow"><span class="num">01</span> Kvart</p>
+    <h2 id="kv-title" class="kv-h2">Ceo kvart iz svakog ugla</h2>
+    <div class="kv-tabs" role="tablist" aria-label="Šta prikazati na modelu">
+      <button type="button" role="tab" id="kv-tab-pregled" data-layer="pregled" aria-selected="true" aria-controls="kv-info-pregled">Pregled</button>
+      <button type="button" role="tab" id="kv-tab-okruzenje" data-layer="okruzenje" aria-selected="false" aria-controls="kv-info-okruzenje" tabindex="-1">Okruženje</button>
+      <button type="button" role="tab" id="kv-tab-lamele" data-layer="lamele" aria-selected="false" aria-controls="kv-info-lamele" tabindex="-1">Lamele</button>
+      <button type="button" role="tab" id="kv-tab-dvoriste" data-layer="dvoriste" aria-selected="false" aria-controls="kv-info-dvoriste" tabindex="-1">Dvorište</button>
+      <button type="button" role="tab" id="kv-tab-prizemlje" data-layer="prizemlje" aria-selected="false" aria-controls="kv-info-prizemlje" tabindex="-1">Prizemlje</button>
+    </div>
+    <div class="kv-info" id="kv-info-pregled" role="tabpanel" aria-labelledby="kv-tab-pregled" data-info="pregled">
+      <p class="kv-lede">Osam lamela spojeno je u zatvoreni gradski blok oko zajedničkog dvorišta, na obodu naselja Altina u Zemunu.</p>
+      <p class="kv-meta">P + 9 + Ps · do 36,5 m</p>
+    </div>
+    <div class="kv-info" id="kv-info-okruzenje" role="tabpanel" aria-labelledby="kv-tab-okruzenje" data-info="okruzenje" hidden>
+      <p class="kv-lede">Kompleks se nalazi na obodu naselja Altina, u opštini Zemun. Okružuju ga magistrala T6, auto-put Beograd&nbsp;– Novi Sad i ulice S126 i S133&nbsp;– Ratarski put.</p>
+      <p class="kv-body">U neposrednoj blizini nalazi se Regionalni poštanski centar Pošte Srbije.</p>
+      <p class="kv-meta">Udaljenosti i vreme putovanja biće objavljeni naknadno.</p>
+    </div>
+    <div class="kv-info" id="kv-info-lamele" role="tabpanel" aria-labelledby="kv-tab-lamele" data-info="lamele" hidden>
+      <p class="kv-lede" data-kv-lam-title>Izaberite lamelu na modelu.</p>
+      <p class="kv-body" data-kv-lam-text>Lamele 5 i 6 su u fokusu prodaje&nbsp;– stanovi do 40&nbsp;m².</p>
+      <div class="kv-lam-list" role="group" aria-label="Lamele">
+        <button type="button" data-kv-lam="1">1</button><button type="button" data-kv-lam="2">2</button><button type="button" data-kv-lam="3">3</button><button type="button" data-kv-lam="4">4</button><button type="button" class="is-focus" data-kv-lam="5">5</button><button type="button" class="is-focus" data-kv-lam="6">6</button><button type="button" data-kv-lam="7">7</button><button type="button" data-kv-lam="8">8</button>
+      </div>
+      <a class="btn kv-cta" href="#stanovi" hidden></a>
+    </div>
+    <div class="kv-info" id="kv-info-dvoriste" role="tabpanel" aria-labelledby="kv-tab-dvoriste" data-info="dvoriste" hidden>
+      <p class="kv-lede">Unutrašnje dvorište je polu-privatno i namenjeno pre svega stanarima.</p>
+      <p class="kv-body">Do njega se stiže kroz tri pešačka pasaža u nivou prizemlja&nbsp;– između lamela 1–2, 2–3 i 7–8.</p>
+    </div>
+    <div class="kv-info" id="kv-info-prizemlje" role="tabpanel" aria-labelledby="kv-tab-prizemlje" data-info="prizemlje" hidden>
+      <p class="kv-lede">93 poslovna prostora u prizemlju lamela i u aneksu.</p>
+      <p class="kv-body">Lokali za trgovinu i usluge otvoreni su ka okolnim ulicama i ka dvorištu, a da pritom ne remete mir unutrašnje pešačke zone.</p>
+    </div>
+    <button type="button" class="kv-apt-cta" data-kv-apt><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span><b>Prošetajte stanom</b><small>3D tura · L5-5 · 49,37 m²</small></span><i aria-hidden="true">→</i></button>
+  </div>
+
+  <ul class="kv-stats" aria-label="Ceo kompleks u brojkama">
+    <li><span class="kv-num">1&nbsp;291</span><span class="kv-lbl">stan, 33–158&nbsp;m²</span></li>
+    <li><span class="kv-num">93</span><span class="kv-lbl">poslovna prostora</span></li>
+    <li><span class="kv-num">1&nbsp;605</span><span class="kv-lbl">parking mesta</span></li>
+    <li><span class="kv-num">40,4&nbsp;%</span><span class="kv-lbl">parcele&nbsp;– slobodne i zelene površine</span></li>
+  </ul>
+  <p class="caption kv-caption">Model iz FBX-a sa delom originalnih tekstura; materijali i osvetljenje prilagođeni su pregledaču, a oznake lamela, dvorišta i prizemlja su približne. Šema okruženja je orijentaciona. Satelitski snimak: Esri, Maxar, Earthstar Geographics. Okolne zgrade: © OpenStreetMap contributors, visine su procenjene.</p>
 </section>
 
 <!-- 3 · ARHITEKTURA -->
@@ -212,7 +210,7 @@
         </div>
       </div>
       <div class="arch-text">
-        <p class="eyebrow"><span class="num">03</span> Arhitektura</p>
+        <p class="eyebrow"><span class="num">02</span> Arhitektura</p>
         <h2 id="arch-title" class="h2">P + 9 + Ps</h2>
         <p class="lede">Prizemlje, devet spratova i povučeni sprat. Ispod zgrade su četiri podzemne etaže.</p>
         <dl class="specs">
@@ -250,7 +248,7 @@
     <div class="ground-shade" aria-hidden="true"></div>
   </div>
   <div class="wrap ground-copy">
-    <p class="eyebrow"><span class="num">04</span> Prizemlje</p>
+    <p class="eyebrow"><span class="num">03</span> Prizemlje</p>
     <h2 id="ground-title" class="h2"><span data-count="93">93</span> poslovna prostora</h2>
     <p class="lede">Lokali za trgovinu i usluge otvoreni su ka okolnim ulicama i ka dvorištu, a da pritom ne remete mir unutrašnje pešačke zone. Na vizualizaciji&nbsp;– restorani i kafei.</p>
     <div class="toggle" role="group" aria-label="Doba dana na vizualizaciji">
@@ -265,7 +263,7 @@
 <section class="chapter ch-court" id="dvor" aria-labelledby="court-title" data-chapter>
   <div class="wrap">
     <div class="court-head">
-      <p class="eyebrow"><span class="num">05</span> Dvorište</p>
+      <p class="eyebrow"><span class="num">04</span> Dvorište</p>
       <h2 id="court-title" class="h2 reveal-words">Dvorište unutar bloka&nbsp;– za šetnju i odmor</h2>
     </div>
     <figure class="court-hero clip-reveal">
@@ -295,88 +293,59 @@
   </div>
 </section>
 
-<!-- 6 · BROJKE — stat relay -->
-<section class="chapter ch-stats" id="cifry" aria-labelledby="stats-title" data-chapter>
-  <div class="stats-pin">
-    <div class="stats-bg" aria-hidden="true">
-      <img class="sbg sbg-0 is-on" src="img/dusk-2000.webp" alt="" loading="lazy">
-      <img class="sbg sbg-1" src="img/day-1673.webp" alt="" loading="lazy">
-      <img class="sbg sbg-2" src="img/roof-1200.webp" alt="" loading="lazy">
-      <img class="sbg sbg-3" src="img/courtyard-1600.webp" alt="" loading="lazy">
-    </div>
-    <div class="wrap stats-wrap">
-      <p class="eyebrow"><span class="num">06</span> Brojke · ceo kompleks</p>
-      <h2 id="stats-title" class="sr">Ceo kompleks u brojkama</h2>
-      <ol class="stats">
-        <li class="stat is-on">
-          <p class="stat-num"><span data-count="1291" data-sep="1">1&nbsp;291</span></p>
-          <p class="stat-label">stan</p>
-          <p class="stat-note">U celom kompleksu&nbsp;– od jednosobnih do četvorosobnih, 33–158 m²</p>
-        </li>
-        <li class="stat">
-          <p class="stat-num"><span data-count="93">93</span></p>
-          <p class="stat-label">poslovna prostora</p>
-          <p class="stat-note">U prizemlju lamela i u aneksu</p>
-        </li>
-        <li class="stat">
-          <p class="stat-num"><span data-count="1605" data-sep="1">1&nbsp;605</span></p>
-          <p class="stat-label">parking mesta</p>
-          <p class="stat-note">1&nbsp;561 u podzemnoj garaži na tri nivoa i 44 na parceli</p>
-        </li>
-        <li class="stat">
-          <p class="stat-num"><span data-count="40.4" data-dec="1">40,4</span><span class="pct">%</span></p>
-          <p class="stat-label">parcele&nbsp;– slobodne i zelene površine</p>
-          <p class="stat-note">7&nbsp;757 m² od ukupno 19&nbsp;198 m² površine parcele</p>
-        </li>
-      </ol>
-      <div class="stats-progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-      <p class="stats-foot">Ukupna bruto površina&nbsp;– 150&nbsp;028 m², od toga nadzemna&nbsp;– 97&nbsp;367 m²</p>
-    </div>
-  </div>
-</section>
-
-<!-- 7 · IZBOR STANOVA — lamele 5 i 6, do 50 m² -->
+<!-- 7 · IZBOR STANOVA — lamele 5 i 6, do 40 m² -->
 <section class="chapter ch-cat light" id="stanovi" aria-labelledby="cat-title" data-chapter>
   <div class="wrap">
     <div class="cat-head">
       <div class="cat-intro">
-        <p class="eyebrow"><span class="num">07</span> Izbor stanova</p>
-        <h2 id="cat-title" class="h2">Stanovi do 50&nbsp;m² u lamelama 5 i 6</h2>
-        <p class="lede">U fokusu prodaje su lamele 5 i 6. Izdvojili smo stanove do 50&nbsp;m² na 7. spratu&nbsp;– za svaki je dostupan originalni list sa osnovom.</p>
+        <p class="eyebrow"><span class="num">05</span> Izbor stanova</p>
+        <h2 id="cat-title" class="h2">Stanovi do 40&nbsp;m² u lamelama 5 i 6</h2>
+        <p class="lede">U fokusu prodaje su lamele 5 i 6. Izdvojili smo 18 stanova do 40&nbsp;m², od 1. do 10. sprata&nbsp;– za svaki je dostupan originalni list sa osnovom.</p>
       </div>
       <img class="cat-logo" src="img/bdp-logo.webp" width="524" height="254" alt="Blue Danube Promenade" loading="lazy" decoding="async">
     </div>
 
     <div class="finder" id="finder">
       <div class="finder-tabs" role="tablist" aria-label="Lamela">
-        <button type="button" role="tab" id="tab-all" aria-selected="true" aria-controls="cat-panel" data-lam="all">Sve <span class="cnt" data-cnt="all">23</span></button>
-        <button type="button" role="tab" id="tab-5" aria-selected="false" aria-controls="cat-panel" data-lam="5" tabindex="-1">Lamela 5 <span class="cnt" data-cnt="5">8</span></button>
-        <button type="button" role="tab" id="tab-6" aria-selected="false" aria-controls="cat-panel" data-lam="6" tabindex="-1">Lamela 6 <span class="cnt" data-cnt="6">15</span></button>
+        <button type="button" role="tab" id="tab-all" aria-selected="true" aria-controls="cat-panel" data-lam="all">Sve <span class="cnt" data-cnt="all">18</span></button>
+        <button type="button" role="tab" id="tab-5" aria-selected="false" aria-controls="cat-panel" data-lam="5" tabindex="-1">Lamela 5 <span class="cnt" data-cnt="5">9</span></button>
+        <button type="button" role="tab" id="tab-6" aria-selected="false" aria-controls="cat-panel" data-lam="6" tabindex="-1">Lamela 6 <span class="cnt" data-cnt="6">9</span></button>
       </div>
 
       <div class="finder-bar">
-        <div class="ff ff-floor">
-          <span class="ff-label" id="lbl-floor">Sprat</span>
-          <span class="ff-static" aria-labelledby="lbl-floor">7. sprat</span>
-        </div>
+        <fieldset class="ff ff-floor">
+          <legend class="ff-label">Sprat</legend>
+          <div class="ori-chips floor-chips">
+            <label><input type="radio" name="floor" value="all" checked><span>Svi</span></label>
+            <label><input type="radio" name="floor" value="1" aria-label="1. sprat"><span>1</span></label>
+            <label><input type="radio" name="floor" value="2" aria-label="2. sprat"><span>2</span></label>
+            <label><input type="radio" name="floor" value="3" aria-label="3. sprat"><span>3</span></label>
+            <label><input type="radio" name="floor" value="4" aria-label="4. sprat"><span>4</span></label>
+            <label><input type="radio" name="floor" value="5" aria-label="5. sprat"><span>5</span></label>
+            <label><input type="radio" name="floor" value="6" aria-label="6. sprat"><span>6</span></label>
+            <label><input type="radio" name="floor" value="7" aria-label="7. sprat"><span>7</span></label>
+            <label><input type="radio" name="floor" value="8" aria-label="8. sprat"><span>8</span></label>
+            <label><input type="radio" name="floor" value="9" aria-label="9. sprat"><span>9</span></label>
+            <label><input type="radio" name="floor" value="10" aria-label="10. sprat"><span>10</span></label>
+          </div>
+        </fieldset>
         <div class="ff ff-area">
-          <label class="ff-label" for="f-area">Površina do <output id="area-out" for="f-area">50</output>&nbsp;m²</label>
-          <input type="range" id="f-area" min="30" max="50" step="0.5" value="50" aria-valuetext="do 50 m²">
-          <span class="ff-scale" aria-hidden="true"><span>30</span><span>50 m²</span></span>
+          <label class="ff-label" for="f-area">Površina do <output id="area-out" for="f-area">40</output>&nbsp;m²</label>
+          <input type="range" id="f-area" min="30" max="40" step="0.1" value="40" aria-valuetext="do 40 m²">
+          <span class="ff-scale" aria-hidden="true"><span>30</span><span>40 m²</span></span>
         </div>
         <fieldset class="ff ff-ori">
           <legend class="ff-label">Orijentacija prozora</legend>
           <div class="ori-chips">
             <label><input type="radio" name="ori" value="all" checked><span>Sve</span></label>
-            <label><input type="radio" name="ori" value="severoistok"><span>Severoistok</span></label>
-            <label><input type="radio" name="ori" value="jugozapad"><span>Jugozapad</span></label>
             <label><input type="radio" name="ori" value="jugoistok"><span>Jugoistok</span></label>
-            <label><input type="radio" name="ori" value="severozapad"><span>Severozapad</span></label>
+            <label><input type="radio" name="ori" value="severoistok"><span>Severoistok</span></label>
           </div>
         </fieldset>
         <div class="ff ff-sort">
           <label class="ff-label" for="f-sort">Sortiranje</label>
           <select id="f-sort">
+            <option value="floor">Sprat: od nižeg ka višem</option>
             <option value="area-asc">Površina: od manje ka većoj</option>
             <option value="area-desc">Površina: od veće ka manjoj</option>
             <option value="id">Broj stana</option>
@@ -385,7 +354,7 @@
       </div>
 
       <div class="finder-status">
-        <p class="cat-count" id="cat-count" aria-live="polite" aria-atomic="true">23 stana</p>
+        <p class="cat-count" id="cat-count" aria-live="polite" aria-atomic="true">18 stanova</p>
         <button type="button" class="link-btn" id="cat-reset" hidden>Poništi filtere</button>
       </div>
 
@@ -393,7 +362,7 @@
         <ul class="cat-grid" id="cat-grid"></ul>
         <div class="cat-empty" id="cat-empty" hidden>
           <p class="h3">Nema stanova za izabrane filtere</p>
-          <p class="body">Promenite lamelu, površinu ili orijentaciju&nbsp;– ili poništite sve filtere.</p>
+          <p class="body">Promenite lamelu, sprat, površinu ili orijentaciju&nbsp;– ili poništite sve filtere.</p>
           <button type="button" class="btn btn-ink" id="cat-empty-reset">Poništi filtere</button>
         </div>
       </div>
@@ -403,7 +372,7 @@
         <div><dt>Status stanova</dt><dd>biće objavljen naknadno</dd></div>
         <div><dt>Rokovi</dt><dd>u pripremi</dd></div>
       </dl>
-      <p class="caption cat-note">Prikazani su stanovi do 50&nbsp;m² sa 7. sprata u lamelama 5 i 6. Površine i orijentacija preuzeti su sa originalnih listova; isečci osnova napravljeni su sa istih listova, bez izmena crteža.</p>
+      <p class="caption cat-note">Prikazani su stanovi do 40&nbsp;m² u lamelama 5 i 6 (lamela 5: 1.–9. sprat, lamela 6: 2.–10. sprat). Sprat, površine i orijentacija preuzeti su sa originalnih listova; isečci osnova napravljeni su sa istih listova, bez izmena crteža.</p>
     </div>
   </div>
 </section>
@@ -412,7 +381,7 @@
 <section class="chapter ch-form" id="zayavka" aria-labelledby="form-title" data-chapter>
   <div class="wrap grid-2 form-grid">
     <div class="col-text">
-      <p class="eyebrow"><span class="num">08</span> Zahtev</p>
+      <p class="eyebrow"><span class="num">06</span> Zahtev</p>
       <h2 id="form-title" class="h2">Zatražite prezentaciju</h2>
       <p class="lede">Ostavite kontakt&nbsp;– poslaćemo vam materijale o projektu čim budu spremni i rado ćemo odgovoriti na vaša pitanja.</p>
     </div>
@@ -476,12 +445,12 @@
     </div>
     <aside class="dlg-side">
       <img class="dlg-logo" src="img/bdp-logo.webp" width="524" height="254" alt="Blue Danube Promenade" decoding="async">
-      <p class="eyebrow" id="dlg-kicker">Lamela 5 · 7. sprat</p>
-      <h2 class="dlg-title" id="dlg-title" tabindex="-1">Stan L5-80</h2>
+      <p class="eyebrow" id="dlg-kicker">Lamela 5 · 1. sprat</p>
+      <h2 class="dlg-title" id="dlg-title" tabindex="-1">Stan L5-10</h2>
       <dl class="dlg-dl">
         <div><dt>Ukupna površina</dt><dd id="dlg-area"></dd></div>
         <div><dt>Orijentacija prozora</dt><dd id="dlg-ori"></dd></div>
-        <div><dt>Sprat</dt><dd>7.</dd></div>
+        <div><dt>Sprat</dt><dd id="dlg-floor"></dd></div>
       </dl>
       <p class="caption" id="dlg-desc">Prikazan je originalni list bez izmena. Prevlačenjem ili točkićem pomerate prikaz, dvoklikom uvećavate.</p>
       <div class="dlg-actions">
@@ -501,7 +470,7 @@
 <footer class="site-footer">
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <p class="foot-mark">Blue Danube Promenade</p>
+      <p class="foot-mark"><img class="foot-logo" src="img/brand/logo-bd-ink.webp" width="185" height="104" alt="Blue Danube Promenade" loading="lazy"></p>
       <p class="foot-note">Naziv u projektnoj dokumentaciji (PGD): Lakat krivina</p>
     </div>
     <dl class="foot-dl">
@@ -516,446 +485,9 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
 <script src="data/stanovi.js" defer></script>
-<script src="app.js" defer></script>
-<script data-pplx-inline-edit>
-(function () {
-  if (window === window.top) return;
-
-  const allowedParentOrigins = ["https://www.perplexity.ai","https://perplexity.ai","https://testing.perplexity.ai","https://staging.perplexity.ai","https://*.preview.i.perplexity.ai","http://perplexity.localhost","http://localhost:1420","http://127.0.0.1:1420","http://localhost:3000","http://127.0.0.1:3000","http://localhost:5173","http://127.0.0.1:5173"];
-  const MAX_FONT_BYTES = 500 * 1024;
-  const MAX_TOTAL_FONT_BYTES = 2 * 1024 * 1024;
-  const DEFAULT_LINE_HEIGHT = 16;
-  let scrollForwarding = false;
-  let scrollRaf = 0;
-  let trustedTopOrigin = null;
-
-  // Allow entries like "https://*.preview.i.perplexity.ai" — the wildcard
-  // matches a single DNS label (no dots), so "https://*.foo" cannot stretch
-  // across multiple labels.
-  function matchesAllowedOrigin(origin) {
-    if (!origin) return false;
-    for (const entry of allowedParentOrigins) {
-      if (!entry.includes("*")) {
-        if (entry === origin) return true;
-        continue;
-      }
-      const pattern = new RegExp(
-        "^" +
-          entry.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, "[^.]+") +
-          "$",
-      );
-      if (pattern.test(origin)) return true;
-    }
-    return false;
-  }
-
-  // Trust decision: when the sender is same-origin-visible (event.origin is a
-  // real origin like https://www.perplexity.ai) we trust event.origin directly.
-  // When event.origin is "null" (opaque broker srcdoc), we fall back to the
-  // broker's stamped `parentOrigin` to identify the top window. The fallback
-  // is claim-only — we rely on the browser's native `targetOrigin` enforcement
-  // on the response path (see postToTrustedTop) to ensure replies can't be
-  // delivered to anyone but the actual top window of that claimed origin.
-  function getTrustedParentOrigin(event) {
-    const forwardedParentOrigin =
-      typeof event.data.parentOrigin === "string" ? event.data.parentOrigin : null;
-    const parentOrigin = event.origin === "null" ? forwardedParentOrigin : event.origin;
-    return matchesAllowedOrigin(parentOrigin) ? parentOrigin : null;
-  }
-
-  // All responses go to window.top with targetOrigin = the allowlisted origin.
-  // An attacker that iframes us inside their own null-origin broker can claim
-  // any parentOrigin they like, but the browser will drop the reply whenever
-  // the real top's origin doesn't match — so the screenshot never leaves.
-  function postToTrustedTop(message) {
-    if (!trustedTopOrigin) return;
-    try {
-      window.top.postMessage(message, trustedTopOrigin);
-    } catch (_error) {}
-  }
-
-  const PICK_CAPABILITIES = ["pick"];
-  const PICK_CHAIN_LENGTH = 4;
-  const PICK_MAX_TEXT_CHARS = 120;
-  const PICK_MAX_HTML_CHARS = 300;
-
-  function truncate(value, maxChars) {
-    return value.length > maxChars ? value.slice(0, maxChars - 1) + "…" : value;
-  }
-
-  function isPickableElement(element) {
-    return (
-      element instanceof Element &&
-      element !== document.documentElement &&
-      element !== document.body
-    );
-  }
-
-  function resolvePickTarget(x, y) {
-    if (!Number.isFinite(x) || !Number.isFinite(y)) return null;
-    const element = document.elementFromPoint(x, y);
-    return isPickableElement(element) ? element.closest("svg") || element : null;
-  }
-
-  function pickLabel(element) {
-    if (element.id) return element.localName + "#" + element.id;
-    return [element.localName].concat(Array.from(element.classList).slice(0, 2)).join(".");
-  }
-
-  // Only attributes that help find the element in source. data-* values and URL
-  // query strings or fragments can carry tokens.
-  const PICK_ATTRIBUTES = new Set([
-    "id",
-    "class",
-    "name",
-    "type",
-    "role",
-    "alt",
-    "aria-label",
-    "href",
-    "src",
-  ]);
-
-  function pickAttributeValue(attribute) {
-    return attribute.name === "href" || attribute.name === "src"
-      ? attribute.value.split(/[?#]/)[0]
-      : attribute.value;
-  }
-
-  function describePickElement(element) {
-    const chain = [];
-    for (
-      let current = element;
-      isPickableElement(current) && chain.length < PICK_CHAIN_LENGTH;
-      current = current.parentElement
-    ) {
-      chain.unshift(current);
-    }
-    const attributes = Array.from(element.attributes)
-      .filter((attribute) => PICK_ATTRIBUTES.has(attribute.name))
-      .map((attribute) => ` ${attribute.name}="${pickAttributeValue(attribute).replace(/"/g, "&quot;")}"`)
-      .join("");
-    const text = (element.innerText || element.textContent || "").replace(/\s+/g, " ").trim();
-    return {
-      chain: chain.map(pickLabel),
-      html: truncate(`<${element.localName}${attributes}>`, PICK_MAX_HTML_CHARS),
-      text: text ? truncate(text, PICK_MAX_TEXT_CHARS) : undefined,
-    };
-  }
-
-  // Hover asks once per frame, and innerText on a large section forces layout,
-  // so only the rect is re-read while the pointer stays on the same element.
-  // Clicks ask for fresh details since the page may have changed the element.
-  let lastPick = null;
-
-  function describePickTarget(element, fresh) {
-    if (fresh || lastPick?.element !== element) {
-      lastPick = { element, details: describePickElement(element) };
-    }
-    const rect = element.getBoundingClientRect();
-    return {
-      rect: { x: rect.left, y: rect.top, width: rect.width, height: rect.height },
-      ...lastPick.details,
-    };
-  }
-
-  function inlineAll(original, clone) {
-    if (original.nodeType !== 1 || clone.nodeType !== 1) return;
-
-    try {
-      const computedStyle = getComputedStyle(original);
-      // cssText on a computed style is the serialized declaration in modern
-      // Chromium/Safari — a single read beats enumerating ~400 longhand
-      // properties. Firefox returns "" here, so we fall back on empty.
-      const serialized = computedStyle.cssText;
-      if (serialized) {
-        clone.style.cssText = serialized;
-      } else {
-        const parts = new Array(computedStyle.length);
-        for (let index = 0; index < computedStyle.length; index += 1) {
-          const property = computedStyle[index];
-          parts[index] = `${property}:${computedStyle.getPropertyValue(property)};`;
-        }
-        clone.style.cssText = parts.join("");
-      }
-    } catch (_error) {}
-
-    const originalChildren = original.children;
-    const clonedChildren = clone.children;
-    for (
-      let index = 0;
-      index < originalChildren.length && index < clonedChildren.length;
-      index += 1
-    ) {
-      inlineAll(originalChildren[index], clonedChildren[index]);
-    }
-  }
-
-  function extractFontUrl(srcValue) {
-    const matches = [
-      ...srcValue.matchAll(
-        /url\(["']?([^"')]+)["']?\)(?:\s*format\(["']?([^"')]+)["']?\))?/gi,
-      ),
-    ];
-    if (matches.length === 0) return null;
-    const woff2 = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff2"));
-    if (woff2) return woff2[1];
-    const woff = matches.find((m) => m[2] && m[2].toLowerCase().includes("woff"));
-    if (woff) return woff[1];
-    return matches[0][1];
-  }
-
-  // Cache resolved font URL -> data URI across captures. Fonts on a page
-  // essentially never change, and a batch run emits multiple captures back to
-  // back — without this we'd refetch + re-base64 every time.
-  const fontDataUriCache = new Map();
-  const SRC_DECLARATION_RE = /src\s*:\s*[^;}]+/i;
-
-  async function fetchAsDataUri(url) {
-    if (fontDataUriCache.has(url)) return fontDataUriCache.get(url);
-    let dataUri = null;
-    try {
-      const response = await fetch(url, { mode: "cors", credentials: "omit" });
-      if (response.ok) {
-        const blob = await response.blob();
-        if (blob.size <= MAX_FONT_BYTES) {
-          dataUri = await new Promise((resolve) => {
-            const reader = new FileReader();
-            reader.onloadend = () =>
-              resolve(typeof reader.result === "string" ? reader.result : null);
-            reader.onerror = () => resolve(null);
-            reader.readAsDataURL(blob);
-          });
-        }
-      }
-    } catch (_error) {
-      dataUri = null;
-    }
-    fontDataUriCache.set(url, dataUri);
-    return dataUri;
-  }
-
-  function collectFontFaceRuleTexts() {
-    const rules = [];
-    for (const sheet of document.styleSheets) {
-      let cssRules;
-      try {
-        cssRules = sheet.cssRules;
-      } catch (_error) {
-        continue;
-      }
-      if (!cssRules) continue;
-      for (const rule of cssRules) {
-        const cssText = rule.cssText || "";
-        if (cssText.startsWith("@font-face")) rules.push(cssText);
-      }
-    }
-    return rules;
-  }
-
-  async function buildInlinedFontCss() {
-    const ruleTexts = collectFontFaceRuleTexts();
-    if (ruleTexts.length === 0) return null;
-
-    const resolved = ruleTexts.map((cssText) => {
-      if (!SRC_DECLARATION_RE.test(cssText)) return null;
-      const srcMatch = cssText.match(/src\s*:\s*([^;}]+)[;}]/i);
-      if (!srcMatch) return null;
-      const url = extractFontUrl(srcMatch[1]);
-      if (!url) return null;
-      try {
-        return { cssText, url: new URL(url, document.baseURI).href };
-      } catch (_error) {
-        return null;
-      }
-    });
-
-    const dataUris = await Promise.all(
-      resolved.map((entry) => (entry ? fetchAsDataUri(entry.url) : Promise.resolve(null))),
-    );
-
-    const inlined = [];
-    let totalBytes = 0;
-    for (let index = 0; index < resolved.length; index += 1) {
-      const entry = resolved[index];
-      const dataUri = dataUris[index];
-      if (!entry || !dataUri) continue;
-      const approxBytes = dataUri.length * 0.75;
-      if (totalBytes + approxBytes > MAX_TOTAL_FONT_BYTES) break;
-      totalBytes += approxBytes;
-      inlined.push(entry.cssText.replace(SRC_DECLARATION_RE, `src: url("${dataUri}")`));
-    }
-    return inlined.length > 0 ? inlined.join("\n") : null;
-  }
-
-  function stripExternal(clone) {
-    const images = clone.querySelectorAll("img");
-    for (let index = 0; index < images.length; index += 1) {
-      const src = images[index].getAttribute("src");
-      if (src && !src.startsWith("data:")) images[index].removeAttribute("src");
-    }
-
-    const elements = clone.querySelectorAll("*");
-    for (let index = 0; index < elements.length; index += 1) {
-      const style = elements[index].style.cssText;
-      if (style && style.includes("url(")) {
-        elements[index].style.cssText = style.replace(
-          /url\(["']?(?!data:)[^)"']*["']?\)/gi,
-          "none",
-        );
-      }
-    }
-  }
-
-  function emitScroll() {
-    scrollRaf = 0;
-    if (!scrollForwarding) return;
-    postToTrustedTop({
-      type: "INLINE_EDIT_SCROLL",
-      scrollX: window.scrollX,
-      scrollY: window.scrollY,
-      capabilities: PICK_CAPABILITIES,
-    });
-  }
-
-  window.addEventListener(
-    "scroll",
-    function () {
-      if (!scrollForwarding || scrollRaf) return;
-      scrollRaf = requestAnimationFrame(emitScroll);
-    },
-    { passive: true, capture: true },
-  );
-
-  async function handleCaptureRequest(event) {
-    const requestId = event.data.requestId;
-    const scrollX = window.scrollX;
-    const scrollY = window.scrollY;
-    const width = window.innerWidth;
-    const height = window.innerHeight;
-
-    function postResult(dataUrl) {
-      postToTrustedTop({
-        type: "INLINE_EDIT_SCREENSHOT_RESULT",
-        requestId,
-        dataUrl,
-        scrollX,
-        scrollY,
-      });
-    }
-
-    try {
-      // Wait for any pending web fonts to resolve so both inline metrics and
-      // the @font-face inlining below see the same loaded faces.
-      if (document.fonts && document.fonts.ready) {
-        try {
-          await document.fonts.ready;
-        } catch (_error) {}
-      }
-
-      const clone = document.documentElement.cloneNode(true);
-      inlineAll(document.documentElement, clone);
-
-      const removedNodes = clone.querySelectorAll("script,link[rel=\"stylesheet\"],style");
-      for (let index = 0; index < removedNodes.length; index += 1) {
-        removedNodes[index].remove();
-      }
-
-      stripExternal(clone);
-
-      // Re-embed web fonts as data-URI @font-face rules so the SVG rasterizer
-      // can resolve them — external font URLs aren't fetched during
-      // foreignObject rendering, which would otherwise force a fallback face
-      // and change text metrics.
-      const inlinedFontCss = await buildInlinedFontCss();
-      if (inlinedFontCss) {
-        const styleEl = document.createElement("style");
-        styleEl.textContent = inlinedFontCss;
-        const head = clone.querySelector("head");
-        if (head) head.appendChild(styleEl);
-        else clone.insertBefore(styleEl, clone.firstChild);
-      }
-
-      const html = new XMLSerializer().serializeToString(clone);
-      const svg =
-        `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}">` +
-        '<foreignObject width="100%" height="100%">' +
-        `<div xmlns="http://www.w3.org/1999/xhtml" style="width:${width}px;height:${height}px;overflow:hidden">` +
-        `<div style="position:relative;left:-${scrollX}px;top:-${scrollY}px">` +
-        html +
-        "</div></div></foreignObject></svg>";
-      const svgUrl = `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
-      const image = new Image();
-      image.onload = function () {
-        const canvas = document.createElement("canvas");
-        canvas.width = width;
-        canvas.height = height;
-        canvas.getContext("2d").drawImage(image, 0, 0);
-        postResult(canvas.toDataURL("image/png"));
-      };
-      image.onerror = function () {
-        postResult(null);
-      };
-      image.src = svgUrl;
-    } catch (_error) {
-      postResult(null);
-    }
-  }
-
-  window.addEventListener("message", function (event) {
-    if (!event.data) return;
-    // Only accept messages from the direct parent frame. Blocks sibling /
-    // unrelated-window postMessage senders that could otherwise reach us.
-    if (event.source !== window.parent) return;
-
-    const trustedParentOrigin = getTrustedParentOrigin(event);
-    if (!trustedParentOrigin) return;
-    trustedTopOrigin = trustedParentOrigin;
-
-    if (event.data.type === "INLINE_EDIT_PICK") {
-      const element = resolvePickTarget(event.data.x, event.data.y);
-      postToTrustedTop({
-        type: "INLINE_EDIT_PICK_RESULT",
-        seq: event.data.seq,
-        target: element ? describePickTarget(element, event.data.fresh === true) : null,
-      });
-      return;
-    }
-
-    if (event.data.type === "INLINE_EDIT_SCROLL_START") {
-      scrollForwarding = true;
-      emitScroll();
-      return;
-    }
-
-    if (event.data.type === "INLINE_EDIT_SCROLL_STOP") {
-      scrollForwarding = false;
-      if (scrollRaf) cancelAnimationFrame(scrollRaf);
-      scrollRaf = 0;
-      return;
-    }
-
-    if (event.data.type === "INLINE_EDIT_SCROLL_BY") {
-      const { deltaX, deltaY, deltaMode } = event.data;
-      if (!scrollForwarding || !Number.isFinite(deltaX) || !Number.isFinite(deltaY)) return;
-      if (deltaMode !== 0 && deltaMode !== 1 && deltaMode !== 2) return;
-      const lineHeight =
-        parseFloat(getComputedStyle(document.documentElement).lineHeight) || DEFAULT_LINE_HEIGHT;
-      const scaleX = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerWidth : 1;
-      const scaleY = deltaMode === 1 ? lineHeight : deltaMode === 2 ? window.innerHeight : 1;
-      // The selection overlay receives the wheel event instead of this iframe.
-      // Instant scrolling preserves trackpad deltas even on smooth-scroll sites.
-      window.scrollBy({ left: deltaX * scaleX, top: deltaY * scaleY, behavior: "instant" });
-      emitScroll();
-      return;
-    }
-
-    if (event.data.type !== "INLINE_EDIT_CAPTURE_REQUEST") return;
-
-    handleCaptureRequest(event);
-  });
-})();
-
-
-</script></body>
+<script src="app.js?v=kv1" defer></script>
+<script src="js/intro.js?v=20261117-full" defer></script>
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js","three/addons/":"./vendor/three/addons/"}}</script>
+<script type="module" src="js/kvart.js?v=kv11"></script>
+</body>
 </html>

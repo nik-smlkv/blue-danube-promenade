@@ -41,21 +41,21 @@
     sending: 'Šaljemo…',
     submit: 'Pošaljite zahtev',
     secCta: (n, c) => `Pogledajte ${c} ${plural(c)} u lameli ${n}`,
-    lam: 'Lamela', floor: '7. sprat', apt: 'Stan',
+    lam: 'Lamela', floor: (n) => `${n}. sprat`, apt: 'Stan', floorDd: (n) => `${n}.`,
     count: (c) => `${c} ${plural(c)}`,
-    ori: { severoistok: 'severoistok', jugozapad: 'jugozapad', jugoistok: 'jugoistok', severozapad: 'severozapad' },
+    ori: { severoistok: 'severoistok', jugoistok: 'jugoistok' },
     oriLabel: 'Orijentacija prozora',
     open: 'Pogledajte osnovu',
     openAria: (id) => `Stan ${id}: otvorite originalni list sa osnovom`,
     alt: (id) => `Osnova stana ${id}, isečak sa originalnog lista`,
-    fullAlt: (id) => `Originalni list stana ${id}: osnova, specifikacija prostorija i položaj stana na 7. spratu`,
+    fullAlt: (id, n) => `Originalni list stana ${id}: osnova, specifikacija prostorija i položaj stana na ${n}. spratu`,
     dlgTitle: (id) => `Stan ${id}`,
     fit: 'Po širini',
     pos: (i, n) => `${i} od ${n}`,
     mb: (b) => `${(b / 1048576).toFixed(1).replace('.', ',')} MB`,
     m2: 'm²',
     areaText: (v) => `do ${v} m²`,
-    ctxRest: (a) => `· Lamela ${a.lamela} · 7. sprat · ${a.povrsina_label} m²`,
+    ctxRest: (a) => `· Lamela ${a.lamela} · ${a.sprat}. sprat · ${a.povrsina_label} m²`,
     formTitle: 'Zatražite prezentaciju', formTitleCtx: 'Zatražite informacije',
     done: 'Zahtev je primljen', doneCtx: (id) => `Zahtev za stan ${id} je primljen`
   } : {
@@ -66,71 +66,24 @@
     sending: 'Отправляем…',
     submit: 'Отправить заявку',
     secCta: (n, c) => `Смотреть ${c} ${plural(c)} в секции ${n}`,
-    lam: 'Секция', floor: '7-й этаж', apt: 'Квартира',
+    lam: 'Секция', floor: (n) => `${n}-й этаж`, apt: 'Квартира', floorDd: (n) => `${n}-й`,
     count: (c) => `${c} ${plural(c)}`,
-    ori: { severoistok: 'северо-восток', jugozapad: 'юго-запад', jugoistok: 'юго-восток', severozapad: 'северо-запад' },
+    ori: { severoistok: 'северо-восток', jugoistok: 'юго-восток' },
     oriLabel: 'Ориентация окон',
     open: 'Смотреть планировку',
     openAria: (id) => `Квартира ${id}: открыть исходный лист с планировкой`,
     alt: (id) => `Планировка квартиры ${id}, фрагмент исходного листа`,
-    fullAlt: (id) => `Исходный лист квартиры ${id}: планировка, экспликация помещений и положение квартиры на 7-м этаже`,
+    fullAlt: (id, n) => `Исходный лист квартиры ${id}: планировка, экспликация помещений и положение квартиры на ${n}-м этаже`,
     dlgTitle: (id) => `Квартира ${id}`,
     fit: 'По ширине',
     pos: (i, n) => `${i} из ${n}`,
     mb: (b) => `${(b / 1048576).toFixed(1).replace('.', ',')} МБ`,
     m2: 'м²',
     areaText: (v) => `до ${v} м²`,
-    ctxRest: (a) => `· Секция ${a.lamela} · 7-й этаж · ${a.povrsina_label} м²`,
+    ctxRest: (a) => `· Секция ${a.lamela} · ${a.sprat}-й этаж · ${a.povrsina_label} м²`,
     formTitle: 'Получить презентацию', formTitleCtx: 'Запросить информацию',
     done: 'Заявка принята', doneCtx: (id) => `Заявка по квартире ${id} принята`
   };
-  const SECTIONS = SR ? {
-    1: 'Duž ulice S126 · 18,5 × 57 m · 167 stanova, 10 lokala',
-    2: 'Duž ulice S126 · 49 × 20 m · 181 stan, 14 lokala',
-    3: 'Duž ulice S126 · 57,5 × 20 m · 183 stana, 12 lokala',
-    4: 'Duž magistrale T6 · 19 × 45 m · 137 stanova, 7 lokala',
-    5: 'Duž magistrale T6 · 17 × 40 m · 120 stanova, 5 lokala',
-    6: 'Duž interne saobraćajnice · 19 × 62,5 m · 183 stana, 12 lokala',
-    7: 'Duž interne saobraćajnice · 19 × 51 m · 174 stana, 15 lokala',
-    8: 'Sa otklonom u odnosu na Ratarski put · 19 × 46,5 m · 146 stanova i dva depadansa vrtića',
-  } : {
-    1: 'Вдоль улицы С126 · 18,5 × 57 м · 167 квартир, 10 помещений',
-    2: 'Вдоль улицы С126 · 49 × 20 м · 181 квартира, 14 помещений',
-    3: 'Вдоль улицы С126 · 57,5 × 20 м · 183 квартиры, 12 помещений',
-    4: 'Вдоль магистрали Т6 · 19 × 45 м · 137 квартир, 7 помещений',
-    5: 'Вдоль магистрали Т6 · 17 × 40 м · 120 квартир, 5 помещений',
-    6: 'Вдоль внутреннего проезда · 19 × 62,5 м · 183 квартиры, 12 помещений',
-    7: 'Вдоль внутреннего проезда · 19 × 51 м · 174 квартиры, 15 помещений',
-    8: 'Под углом к Ратарскому пути · 19 × 46,5 м · 146 квартир и два помещения детского сада',
-  };
-  const secPolys = $$('.scheme .sec');
-  const secNums = $$('.scheme .sec-nums text');
-  const secCta = $('#sec-cta');
-  const FOCUS_LAM = [5, 6];
-  let activeSec = 0;
-  let secLocked = false; // a click/Enter pins the choice so hover/scroll do not steal it
-  const setSection = (n, force = false) => {
-    if ((n === activeSec && !force) || !SECTIONS[n]) return;
-    activeSec = n;
-    secPolys.forEach((p) => p.classList.toggle('is-active', +p.dataset.sec === n));
-    secNums.forEach((t, i) => t.classList.toggle('is-active', i + 1 === n));
-    $('#sec-title').textContent = `${T.sec} ${n}`;
-    $('#sec-text').textContent = SECTIONS[n];
-    if (secCta) {
-      const focus = FOCUS_LAM.includes(n);
-      secCta.hidden = !focus;
-      if (focus) { secCta.dataset.lam = n; secCta.textContent = T.secCta(n, (window.STANOVI || []).filter((a) => a.lamela === n).length); }
-    }
-  };
-  const softSection = (n) => { if (!secLocked) setSection(n); };
-  secPolys.forEach((p) => {
-    const n = +p.dataset.sec;
-    p.addEventListener('mouseenter', () => softSection(n));
-    p.addEventListener('focus', () => setSection(n));
-    p.addEventListener('click', () => { secLocked = true; setSection(n); });
-    p.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); secLocked = true; setSection(n); } });
-  });
-  setSection(1);
 
   /* ---------- ground floor day / evening toggle ---------- */
   const ground = $('#partner');
@@ -173,12 +126,12 @@
   $('#form-reset').addEventListener('click', () => { form.reset(); setFormCtx(ctxApt); done.hidden = true; form.hidden = false; $('#f-name').focus(); });
 
 
-  /* ---------- 7 · apartment finder (lamele 5/6, 7. sprat, ≤ 50 m²) ---------- */
-  const APTS = (window.STANOVI || []).filter((a) => a.sprat === 7 && a.povrsina_m2 <= 50 && (a.lamela === 5 || a.lamela === 6));
+  /* ---------- 7 · apartment finder (lamele 5/6, ≤ 40 m², floors from data) ---------- */
+  const APTS = (window.STANOVI || []).filter((a) => a.povrsina_m2 <= 40 && (a.lamela === 5 || a.lamela === 6));
   const aptNum = (a) => parseInt(a.id.split('-')[1], 10);
   const fmtArea = (v) => String(v).replace('.', ',');
   const grid = $('#cat-grid');
-  const DEF = { lam: 'all', max: 50, ori: 'all', sort: 'area-asc' };
+  const DEF = { lam: 'all', floor: 'all', max: 40, ori: 'all', sort: 'floor' };
   const st = { ...DEF };
   let shown = [];
   const tabs = $$('.finder-tabs [role=tab]');
@@ -186,6 +139,7 @@
   const areaOut = $('#area-out');
   const sortSel = $('#f-sort');
   const oriInputs = $$('input[name=ori]');
+  const floorInputs = $$('input[name=floor]');
 
   const cardHTML = (a) => `
     <li class="apt" data-id="${a.id}">
@@ -193,7 +147,7 @@
         <span class="apt-plan"><img src="${a.preview}" width="${a.preview_px[0]}" height="${a.preview_px[1]}" loading="lazy" decoding="async" alt="${T.alt(a.id)}"></span>
         <span class="apt-body">
           <span class="apt-top"><span class="apt-id">${a.id}</span><span class="apt-area">${a.povrsina_label}<span class="u">&nbsp;${T.m2}</span></span></span>
-          <span class="apt-sub">${T.lam} ${a.lamela} · ${T.floor}</span>
+          <span class="apt-sub">${T.lam} ${a.lamela} · ${T.floor(a.sprat)}</span>
           <span class="apt-ori"><span class="k">${T.oriLabel}:</span> ${T.ori[a.orijentacija]}</span>
           <span class="apt-more">${T.open}<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
         </span>
@@ -202,9 +156,11 @@
   if (grid) grid.innerHTML = APTS.map(cardHTML).join('');
   const cards = new Map($$('.apt', grid || document).map((li) => [li.dataset.id, li]));
 
-  const passes = (a, s, ignoreLam = false) =>
-    (ignoreLam || s.lam === 'all' || a.lamela === +s.lam) && a.povrsina_m2 <= s.max && (s.ori === 'all' || a.orijentacija === s.ori);
+  const passes = (a, s, ignoreLam = false, ignoreFloor = false) =>
+    (ignoreLam || s.lam === 'all' || a.lamela === +s.lam) && (ignoreFloor || s.floor === 'all' || a.sprat === +s.floor) &&
+    a.povrsina_m2 <= s.max && (s.ori === 'all' || a.orijentacija === s.ori);
   const sorters = {
+    floor: (x, y) => x.sprat - y.sprat || x.lamela - y.lamela || aptNum(x) - aptNum(y),
     'area-asc': (x, y) => x.povrsina_m2 - y.povrsina_m2 || x.lamela - y.lamela || aptNum(x) - aptNum(y),
     'area-desc': (x, y) => y.povrsina_m2 - x.povrsina_m2 || x.lamela - y.lamela || aptNum(x) - aptNum(y),
     id: (x, y) => x.lamela - y.lamela || aptNum(x) - aptNum(y),
@@ -224,6 +180,13 @@
     $$('[data-cnt]').forEach((el) => {
       const k = el.dataset.cnt;
       el.textContent = APTS.filter((a) => passes(a, st, true) && (k === 'all' || a.lamela === +k)).length;
+    });
+    // floor chips: disable floors with no match under the other filters (selected one stays enabled)
+    floorInputs.forEach((i) => {
+      if (i.value === 'all') return;
+      const n = APTS.filter((a) => passes(a, st, false, true) && a.sprat === +i.value).length;
+      i.disabled = n === 0 && !i.checked;
+      i.closest('label').classList.toggle('is-empty', n === 0);
     });
     if (window.ScrollTrigger) { clearTimeout(render.t); render.t = setTimeout(() => ScrollTrigger.refresh(), 120); }
   };
@@ -247,6 +210,7 @@
     areaIn.value = DEF.max; syncArea();
     sortSel.value = DEF.sort;
     oriInputs.forEach((i) => { i.checked = i.value === 'all'; });
+    floorInputs.forEach((i) => { i.checked = i.value === 'all'; });
     setLam('all');
   };
   if (grid) {
@@ -263,14 +227,17 @@
     areaIn.addEventListener('input', () => { st.max = parseFloat(areaIn.value); syncArea(); render(); });
     sortSel.addEventListener('change', () => { st.sort = sortSel.value; render(); });
     oriInputs.forEach((i) => i.addEventListener('change', () => { if (i.checked) { st.ori = i.value; render(); } }));
+    floorInputs.forEach((i) => i.addEventListener('change', () => { if (i.checked) { st.floor = i.value; render(); } }));
     $('#cat-reset').addEventListener('click', () => { resetFilters(); tabs[0].focus({ preventScroll: true }); });
     $('#cat-empty-reset').addEventListener('click', () => { resetFilters(); tabs[0].focus({ preventScroll: true }); });
     syncArea(); render();
-    // schema → catalog with lamela filter
-    if (secCta) secCta.addEventListener('click', () => {
-      const lam = secCta.dataset.lam;
-      Object.assign(st, { max: DEF.max, ori: 'all' }); areaIn.value = DEF.max; syncArea();
+    // 3D chapter → catalog with lamela filter
+    const kvCta = $('.kv-cta');
+    if (kvCta) kvCta.addEventListener('click', () => {
+      const lam = kvCta.dataset.lam;
+      Object.assign(st, { max: DEF.max, ori: 'all', floor: 'all' }); areaIn.value = DEF.max; syncArea();
       oriInputs.forEach((i) => { i.checked = i.value === 'all'; });
+      floorInputs.forEach((i) => { i.checked = i.value === 'all'; });
       setLam(lam);
       setTimeout(() => $(`#tab-${lam}`)?.focus({ preventScroll: true }), RM ? 0 : 1500);
     });
@@ -317,7 +284,8 @@
   const fill = (a) => {
     cur = a;
     const i = shown.findIndex((x) => x.id === a.id);
-    $('#dlg-kicker').textContent = `${T.lam} ${a.lamela} · ${T.floor}`;
+    $('#dlg-kicker').textContent = `${T.lam} ${a.lamela} · ${T.floor(a.sprat)}`;
+    $('#dlg-floor').textContent = T.floorDd(a.sprat);
     $('#dlg-title').textContent = T.dlgTitle(a.id);
     $('#dlg-area').innerHTML = `${a.povrsina_label}&nbsp;${T.m2}`;
     $('#dlg-ori').textContent = T.ori[a.orijentacija];
@@ -327,7 +295,7 @@
     $('#dlg-pos').textContent = i >= 0 ? T.pos(i + 1, shown.length) : '';
     $('#dlg-prev').disabled = i <= 0; $('#dlg-next').disabled = i < 0 || i >= shown.length - 1;
     viewer.classList.add('is-loading');
-    dImg.alt = T.fullAlt(a.id);
+    dImg.alt = T.fullAlt(a.id, a.sprat);
     dImg.width = a.original_px[0]; dImg.height = a.original_px[1];
     dImg.onload = () => viewer.classList.remove('is-loading');
     dImg.src = a.original;
@@ -469,9 +437,6 @@
     window.addEventListener('scroll', updateChrome, { passive: true });
     updateChrome();
     $$('[data-count]').forEach((el) => { el.textContent = fmt(parseFloat(el.dataset.count), parseInt(el.dataset.dec || '0', 10)); });
-    $('.stats').classList.add('is-list');
-    const ring = $('.scroll-cue .ring'); if (ring) ring.style.strokeDashoffset = '0';
-    $('.hero-glow').style.opacity = '0.4';
     return;
   }
 
@@ -505,56 +470,7 @@
 
   const mm = gsap.matchMedia();
 
-  /* ---------- 0 · HERO — macro pull-back from the glass bay windows ---------- */
-  mm.add({ desktop: '(min-width: 861px)', mobile: '(max-width: 860px)' }, (ctx) => {
-    const { desktop } = ctx.conditions;
-    const startScale = desktop ? 2.6 : 2.0;
-    gsap.set('.hero-copy', { xPercent: -50, yPercent: -50 });
-    const tl = gsap.timeline({
-      defaults: { ease: 'none' },
-      scrollTrigger: { trigger: '.hero', start: 'top top', end: desktop ? '+=180%' : '+=110%', pin: true, scrub: 0.8, anticipatePin: 1 },
-    });
-    tl.fromTo('.hero-img', { scale: startScale }, { scale: 1, duration: 1 }, 0)
-      .fromTo('.hero-shade', { opacity: 1 }, { opacity: 0.82, duration: 1 }, 0)
-      .fromTo('.hero-glow', { opacity: 0 }, { opacity: 0.85, duration: 0.7 }, 0.3)
-      .fromTo('.hero-sub', { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.25 }, 0.12)
-      .fromTo('.hero-copy .eyebrow', { opacity: 0.0 }, { opacity: 1, duration: 0.2 }, 0.05)
-      .fromTo('.hero-facts', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.3 }, 0.62)
-      .fromTo('.vside', { opacity: 0 }, { opacity: 1, duration: 0.2 }, 0.7)
-      .fromTo('.scroll-cue .ring', { strokeDashoffset: 188.5 }, { strokeDashoffset: 0, duration: 1 }, 0);
-    return () => tl.kill();
-  });
-
-  // cursor parallax — additive on wrapper, never on the scrubbed image
-  if (window.matchMedia('(pointer: fine)').matches) {
-    const par = $('.hero-par');
-    const copy = $('.hero-copy');
-    const tx = { x: 0, y: 0 }, cur = { x: 0, y: 0 };
-    window.addEventListener('pointermove', (e) => {
-      tx.x = (e.clientX / window.innerWidth - 0.5) * 2;
-      tx.y = (e.clientY / window.innerHeight - 0.5) * 2;
-    }, { passive: true });
-    const setPar = gsap.quickSetter(par, 'css');
-    gsap.ticker.add(() => {
-      cur.x += (tx.x - cur.x) * 0.06; cur.y += (tx.y - cur.y) * 0.06;
-      setPar({ x: -cur.x * 10, y: -cur.y * 8 });
-      gsap.set(copy, { x: cur.x * 6, y: cur.y * 4 });
-    });
-  }
-
-  /* ---------- 1 · PLACE — schematic roads draw in ---------- */
-  $$('.ctx-svg .draw').forEach((p) => {
-    const solid = !p.classList.contains('road-st') && !p.classList.contains('road-int');
-    if (solid) {
-      const len = p.getTotalLength();
-      gsap.set(p, { strokeDasharray: len, strokeDashoffset: len });
-      gsap.to(p, { strokeDashoffset: 0, ease: 'none', scrollTrigger: { trigger: '.place-map', start: 'top 85%', end: 'center 45%', scrub: 0.6 } });
-    } else {
-      gsap.fromTo(p, { opacity: 0 }, { opacity: 1, ease: 'none', scrollTrigger: { trigger: '.place-map', start: 'top 70%', end: 'center 50%', scrub: 0.6 } });
-    }
-  });
-  gsap.fromTo('.ctx-svg .draw-fade', { opacity: 0 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '.place-map', start: 'top 80%', end: 'center 55%', scrub: 0.6 } });
-  gsap.fromTo('.ctx-svg .lbl', { opacity: 0 }, { opacity: 1, stagger: 0.08, ease: 'none', scrollTrigger: { trigger: '.place-map', start: 'top 55%', end: 'center 40%', scrub: 0.6 } });
+  /* ---------- 0 · INTRO — scroll story lives in js/intro.js (no GSAP dependency) ---------- */
 
   /* C1 word sweep on two headlines */
   $$('.reveal-words').forEach((h) => {
@@ -562,28 +478,6 @@
     h.innerHTML = words.map((w) => `<span class="w">${w}</span>`).join(' ');
     gsap.fromTo(h.querySelectorAll('.w'), { opacity: 0.22 }, { opacity: 1, stagger: 0.12, ease: 'none', scrollTrigger: { trigger: h, start: 'top 85%', end: 'top 45%', scrub: true } });
   });
-
-  /* ---------- 2 · BLOCK — sections light up around the courtyard ---------- */
-  ScrollTrigger.create({ trigger: '.counters', start: 'top 85%', once: true, onEnter: () => $$('.counters [data-count]').forEach((el) => countUp(el, 1.2)) });
-  $$('.counters [data-count]').forEach((el) => { el.textContent = '0'; });
-  mm.add('(min-width: 861px)', () => {
-    const st = ScrollTrigger.create({
-      trigger: '.ch-block', start: 'top top', end: '+=120%', pin: '.block-pin', pinSpacing: true, scrub: true,
-      onUpdate: (self) => softSection(Math.min(8, Math.max(1, Math.ceil(self.progress * 8.4)))),
-      onLeave: () => { secLocked = false; }, onLeaveBack: () => { secLocked = false; },
-    });
-    return () => st.kill();
-  });
-  mm.add('(max-width: 860px)', () => {
-    let timer = null;
-    const st = ScrollTrigger.create({
-      trigger: '.scheme', start: 'top 70%', end: 'bottom 20%',
-      onEnter: () => { let n = 1; clearInterval(timer); timer = setInterval(() => { softSection(n); n += 1; if (n > 8) clearInterval(timer); }, 700); },
-    });
-    secPolys.forEach((p) => p.addEventListener('click', () => clearInterval(timer)));
-    return () => { clearInterval(timer); st.kill(); };
-  });
-  gsap.fromTo('.scheme .sec', { opacity: 0.25 }, { opacity: 1, stagger: 0.05, ease: 'none', scrollTrigger: { trigger: '.scheme', start: 'top 85%', end: 'top 40%', scrub: true } });
 
   /* ---------- 3 · ARCHITECTURE — height ruler scrub ---------- */
   const rulerVal = $('.ruler-val');
@@ -622,40 +516,6 @@
     gsap.fromTo(el, { clipPath: 'inset(10% 8% 10% 8% round 28px)' }, { clipPath: 'inset(0% 0% 0% 0% round 28px)', ease: 'none', scrollTrigger: { trigger: el, start: 'top 95%', end: 'top 35%', scrub: true } });
     const img = el.querySelector('img');
     gsap.fromTo(img, { scale: 1.18 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
-  });
-
-  /* ---------- 6 · STATS — pinned relay ---------- */
-  const stats = $$('.stat');
-  const sbgs = $$('.sbg');
-  const bars = $$('.stats-progress span');
-  let curStat = -1;
-  const showStat = (i) => {
-    if (i === curStat) return;
-    curStat = i;
-    stats.forEach((s, k) => s.classList.toggle('is-on', k === i));
-    sbgs.forEach((b, k) => b.classList.toggle('is-on', k === i));
-    const num = stats[i].querySelector('[data-count]');
-    countUp(num, 1.1);
-  };
-  mm.add('(min-width: 861px)', () => {
-    $('.stats').classList.remove('is-list');
-    const st = ScrollTrigger.create({
-      trigger: '.ch-stats', start: 'top top', end: '+=260%', pin: '.stats-pin', scrub: true,
-      onUpdate: (self) => {
-        const p = self.progress * 4;
-        showStat(Math.min(3, Math.floor(p)));
-        bars.forEach((b, k) => b.style.setProperty('--p', Math.max(0, Math.min(1, p - k)).toFixed(3)));
-      },
-      onEnter: () => { if (curStat < 0) showStat(0); },
-    });
-    return () => { st.kill(); curStat = -1; };
-  });
-  mm.add('(max-width: 860px)', () => {
-    $('.stats').classList.add('is-list');
-    stats.forEach((s) => s.classList.add('is-on'));
-    const sts = stats.map((s) => ScrollTrigger.create({ trigger: s, start: 'top 85%', once: true, onEnter: () => countUp(s.querySelector('[data-count]'), 1.2) }));
-    const fades = stats.map((s) => gsap.fromTo(s, { opacity: 0.2, y: 30 }, { opacity: 1, y: 0, ease: 'none', scrollTrigger: { trigger: s, start: 'top 95%', end: 'top 65%', scrub: true } }));
-    return () => { sts.forEach((x) => x.kill()); fades.forEach((x) => x.kill()); };
   });
 
   /* ---------- 7 · FINDER — calm entrance only (filters must stay instant) ---------- */
